@@ -40,26 +40,39 @@ body{
 .menutoolbar{
   background:#d9d9d9;
   border-bottom:1px solid #000;
+  font-size:12px;
 }
 
 .menubar{
+  display:flex;
+  align-items:center;
+  gap:6px;
   padding:6px 8px;
   border-bottom:1px solid #000;
 }
 
+.menubar span{
+  cursor:default;
+}
+
 .toolbar{
   display:flex;
-  flex-direction:column;
-  gap:4px;
+  align-items:center;
+  gap:6px;
   padding:6px 8px;
 }
 
+.toolbar label{
+  white-space:nowrap;
+}
+
 .toolbar input{
-  width:100%;
+  width:300px;
   height:22px;
   border:1px solid #000;
   padding:0 4px;
   font-family:inherit;
+  font-size:12px;
   background:#fff;
 }
 
