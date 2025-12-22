@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Win98";
+  src: url("fonts/PxPlus_IBM_VGA8.ttf") format("truetype");
+}
+
+body{
+  font-family: "Win98","MS Sans Serif",Tahoma,Verdana,Arial,sans-serif;
+  font-size:12px;
+  background:#222;
+  display:grid;
+  place-items:center;
+  -webkit-font-smoothing:none;
+}
+
+.profile-body{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+/* FOLLOW BUTTON AS LINK (FIX JELEK) */
+.follow-btn{
+  display: block;
+  margin-top: 8px;
+
+  background: #bdbdbd;
+  border: 1px solid #000;
+  padding: 6px 0;
+
+  text-align: center;
+  font-weight: bold;
+
+  /* MATIKAN STYLE LINK */
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+/* hover ala IE */
+.follow-btn:hover{
+  background: #cfcfcf;
+}
+
+/* efek ditekan */
+.follow-btn:active{
+  background: #b0b0b0;
+  border-style: inset;
+}
+
+/* cegah warna ungu setelah diklik */
+.follow-btn:visited{
+  color: #000;
+}
+
+.profile-right{
+  padding-top:0;
+  font-size: 13px;     /* besarkan teks */
+  line-height: 1.5;
+}
+
+.profile-left{
+  font-size: 12px;     /* default biasanya 12px */
+  line-height: 1.45;   /* biar tidak mepet */
+}
+
+.friend-text{
+  font-size: 15px;        /* lebih besar dari teks atas */
+  font-weight: 700;       /* lebih tegas */
+  margin-top: 14px;       /* jarak dari paragraf atas */
+  line-height: 1.4;
+}
+
+.profile-left p,
+.profile-right p{
+  margin:0 0 8px 0;
+}
+
+.nowplaying{
+  margin-top:10px;
+}
+
+.gridBottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+
+.gridLists{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+
+.win{width:680px;background:#efefef;border:2px solid #000}
+.titlebar{background:#0b1ea8;color:#fff;padding:6px;font-weight:bold;display:flex;justify-content:space-between}
+.sysbtn{background:#d9d9d9;border:1px solid #000;padding:0 4px}
+/* === MENU + TOOLBAR IE STYLE === */
+.menutoolbar{
+  background:#d9d9d9;
+  border-bottom:1px solid #000;
+  font-family:"Win98","MS Sans Serif",Tahoma,Verdana,Arial,sans-serif;
+  font-size:12px;
+}
+
+/* MENU BAR */
+.menubar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 8px;
+  border-bottom:1px solid #000;
+}
+
+.menubar span{
+  cursor:default;
+}
+
+/* tombol back / next di menu */
+.toolbtn{
+  padding:2px 6px;
+  border:1px solid #000;
+  background:#efefef;
+  line-height:1;
+}
+
+/* spacer kecil */
+.sep{
+  width:10px;
+  display:inline-block;
+}
+
+/* TOOLBAR SEARCH */
+.toolbar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 8px;
+}
+
+.toolbar label{
+  white-space:nowrap;
+}
+
+.toolbar input{
+  width:300px;
+  height:22px;
+  border:1px solid #000;
+  padding:0 4px;
+  font-family:inherit;
+  font-size:12px;
+  background:#fff;
+}
+
+/* === END MENU + TOOLBAR === */
+.toolpill{border:1px solid #000;padding:2px 6px;background:#bdbdbd}
+.addr{display:flex;gap:6px;align-items:center}
+.addr input{border:1px solid #000}
+.content{padding:10px}
+.gridTop{display:grid;grid-template-columns:220px 1fr;gap:10px}
+.panel{border:1px solid #000;background:#d9d9d9}
+.hdr{background:#bdbdbd;padding:4px;font-size:11px;font-weight: 700;letter-spacing:0.4px;line-height:1.3}
+.body{padding:6px}
+.photo img{width:100%;height:100%;object-fit:cover}
