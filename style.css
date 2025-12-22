@@ -183,3 +183,25 @@ a:visited{
 .play-indicator{
   margin-right:4px;
 }
+
+/* =========================
+   PAGE FADE IN
+========================= */
+
+.page-load{
+  opacity:0;
+  animation: pageFade 0.8s ease-out forwards;
+}
+
+.page-load{
+  opacity:0;
+  transform:translateY(6px);
+  animation: pageFadeMove 0.8s ease-out forwards;
+}
+
+@keyframes pageFadeMove{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
