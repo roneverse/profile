@@ -109,11 +109,10 @@ body{
 .profile-left,
 .profile-right{
   font-size:12px;
-  line-height:1.45;
 }
 
 .profile-right{
-  margin-top:8px;
+  margin-top:10px;
 }
 
 .friend-text{
@@ -152,4 +151,35 @@ a{
 
 a:visited{
   color:#551a8b;
+}
+
+/* =========================
+   NOW PLAYING TYPEWRITER
+========================= */
+
+.now-typing{
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+/* lirik sedikit lebih kalem */
+.now-typing.lyric{
+  font-weight:normal;
+}
+
+/* cursor ketik */
+.now-typing::after{
+  content:"_";
+  margin-left:2px;
+  animation: cursorBlink 1s steps(1) infinite;
+}
+
+@keyframes cursorBlink{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+.play-indicator{
+  margin-right:4px;
 }

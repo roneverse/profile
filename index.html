@@ -26,7 +26,8 @@
   <div class="menubar">
     <span>Edit</span> |
     <span>Delete</span> |
-    <span>Archive</span>
+    <span>Archive</span> |
+    <a href="https://jardinimous.xo.je" class="menu-link">Send Anonymous Message</a>
     <span class="sep"></span>
   </div>
 
@@ -48,26 +49,41 @@
         <img src="aki.jpg" alt="profile">
       </div>
 
+          <!-- NOW PLAYING -->
+<div class="panel nowplaying">
+  <span class="play-indicator">▷</span>
+  <span id="nowTypingTitle"
+        class="now-typing"
+        data-text="Now Playing… Cry by Cigarette After Sex"></span>
+  <br>
+  <i>
+    <span id="nowTypingLyric"
+          class="now-typing lyric"
+          data-text=".. my heart just can't be faithful for long .."></span>
+  </i>
+</div>
+
       <!-- PROFILE INFO -->
       <div class="panel">
         <div class="hdr">ABOUT ME</div>
         <div class="body profile-body">
 
           <div class="profile-left">
-            <p>My name is Gantara Fajar Dinata, but you can call me Gan, Jardin, or anything you like.</p>
-            <p> </p>
-            <p><b>PRONOUNS:</b> He/Him.</p>
-            <p><b>COUNTRY:</b> Indonesia.</p>
-            <p><b>SEXUALITY:</b> Bisexual.</p>
-            <p><b>MBTI:</b> INTJ-T.</p>
-
-            <a href="https://x.com/Derhortus" class="follow-btn">
-              FOLLOW </a>
+            My name is Gantara Fajar Dinata, but you can call me <u>Gan</u>, <u>Jardin</u>, or anything you like. 
+            <br>
+            <br>
+            <b>PRONOUNS:</b> He/Him.<br>
+            <b>SEXUALITY:</b> Bisexual.<br>
+            <b>MBTI:</b> INTJ-T.
           </div>
 
           <div class="profile-right">
-            <p><i>I love exploring various forms of media.</i> In books, i prefer fiction genres like fantasy, thriller, horror, mystery, and literary. For games, i enjoy titles such as Genshin Impact, Roblox, Plato, and Mobile Legends.</p>
-            <p class="friend-text"><u>So, wanna be my friend?</u></p>
+          <u>I love exploring various forms of media.</u><br>
+          <br><b>In books</b>, i prefer fiction genres like fantasy, thriller, horror, mystery, and literary. 
+          <b>For games</b>, i enjoy titles such as Genshin Impact, Roblox, Plato, and Mobile Legends.
+          <b>Anime?</b> I love Chainsaw Man, Sakamoto Days, Gachiakuta, Bungo Stray Dogs, Demon Slayer, Attack on Titan and Wind Breaker.<br>
+          <br>I watch <b>Movies</b>, anything as long as it’s good! though i’m particularly drawn to fantasy, science fiction, horror, and thriller genres.
+          I enjoy a wide range of <b>Music</b> styles, especially Classical, Instrumental, Western, J-pop, and K-pop.
           </div>
 
         </div>
@@ -82,7 +98,7 @@
         <div class="body">
           Mostly talk about my hyperfixations and random things.
           Not spoiler free and
-          <a href="#">enjoy NSFW content.</a> So, minors shouldn’t be here
+          <a href="#">enjoy NSFW content</a>. So, minors shouldn’t be here.
         </div>
       </div>
 
@@ -95,39 +111,42 @@
       </div>
     </div>
 
-    <!-- NOW PLAYING -->
-    <div class="panel nowplaying">
-      <b>Now Playing…</b>
-      <a href="https://open.spotify.com/track/7mDTvYD2ieE4Q28XFziMfJ?si=2ab4b354f4a340d1">Cry</a> by Cigarette After Sex ▷
-      <i>.. my heart just can't be faithful for long ..</i>
-    </div>
-
-    <!-- LISTS -->
-    <div class="gridLists">
-      <div class="panel">
-        <div class="hdr">ANIME</div>
-        <div class="body">
-          Chainsaw Man, Gachiakuta, Sakamoto Days, Attack on Titan, Demon Slayer, Naruto Shippuden, Wind Breaker.
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="hdr">MUSIC</div>
-        <div class="body">
-          I enjoy a wide range of styles; Classical, Instrumental, Western, J-pop, and K-pop. please ask me for the details!
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="hdr">MOVIE</div>
-        <div class="body">
-          Anything as long as it’s good! though i’m particularly drawn to fantasy, science fiction, horror, and thriller genres.
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
+
+<script>
+(function(){
+  const titleEl = document.getElementById("nowTypingTitle");
+  const lyricEl = document.getElementById("nowTypingLyric");
+  if(!titleEl || !lyricEl) return;
+
+  const titleText = titleEl.dataset.text;
+  const lyricText = lyricEl.dataset.text;
+
+  let i = 0;
+  let j = 0;
+
+  function typeTitle(){
+    if(i < titleText.length){
+      titleEl.textContent += titleText.charAt(i);
+      i++;
+      setTimeout(typeTitle, 70);
+    } else {
+      setTimeout(typeLyric, 400); // jeda sebelum lirik
+    }
+  }
+
+  function typeLyric(){
+    if(j < lyricText.length){
+      lyricEl.textContent += lyricText.charAt(j);
+      j++;
+      setTimeout(typeLyric, 65);
+    }
+  }
+
+  typeTitle();
+})();
+</script>
 
 </body>
 
